@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<style>
+    .error {color: #FF0008;}
+</style>
+<body>
+
+    
+<script>
+    function checkEmpty() {
+        if (document.getElementById('user').value == "") {
+                alert("Please select a username");
+                document.getElementById('user').style.borderColor = "red";
+                return false;
+        } else if (document.getElementById('pass').value == "") {
+                alert("Please enter your password");
+                document.getElementById('pass').style.borderColor = "red";
+                return false;
+        } else if (document.getElementById('repass').value == "") {
+                alert("Please re-enter your password");
+                document.getElementById('repass').style.borderColor = "red";
+                return false;
+        } else if (document.getElementById('compname').value == "") {
+                alert("Please enter your full company name");
+                document.getElementById('compname').style.borderColor = "red";
+                return false;
+        } else if (document.getElementById('address').value == "") {
+                alert("Please enter your company address");
+                document.getElementById('address').style.borderColor = "red";
+                return false;
+        } else if (document.getElementById('email').value == "") {
+                alert("Please enter your company email");
+                document.getElementById('email').style.borderColor = "red";
+                return false;
+        } else if (document.getElementById('website').value == "") {
+                alert("Please enter your company's website");
+                document.getElementById('website').style.borderColor = "red";
+                return false;
+        }
+    }
+</script>
+
+    
+<form method="post" onsubmit="return checkEmpty()">
+    <title> Register </title>
+    All fields marked with * are required. Make sure to complete all information as fully as possible.
+    <br><br>
+    <fieldset>
+    <legend> Login Details: </legend>
+        
+        Username:
+        <br><input type="text" id="user" name="user" size="20">
+        <span class="error">* </span>
+        <br>
+        
+        Password:
+        <br><input type="password" id="pass" name="pass" size="20">
+        <span class="error">* </span>
+        <br>
+        
+        Retype Password:
+        <br><input type="password" id="repass" name="repass" size="20">
+        <span class="error">* </span>
+        <br>
+        
+    </fieldset>
+    <br>
+    <fieldset>
+    <legend> Company Information: </legend>
+        
+        Full Company Name:
+        <br><input type="text" id="compname" name="compname" size="40">
+        <span class="error">* </span>
+        <br>
+        
+        Address:
+        <br><input type="text" id="address" name="address" size="40">
+        <span class="error">* </span>
+        <br>
+        
+        Email:
+        <br><input type="email" id="email" name="email" size="40">
+        <span class="error">* </span>
+        <br>
+        
+        Website:
+        <br><input type="text" id="website" name="website" size="40">
+        <span class="error">* </span>
+        <br>
+        
+    </fieldset>
+    <input type="submit" value="Register">
+    <input type="reset">
+    <br><br><br>
+    
+</form>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<style>
+    .error {color: #FF0008;}
+</style>
+<body>
+
+    
+<script>
+    function checkEmpty() {
+        if (document.getElementById('title').value == "") {
+                alert("Please enter the title of the game");
+                document.getElementById('title').style.borderColor = "red";
+                return false;
+        } else if (document.getElementById('company').value == "") {
+                alert("Please enter the name of the company that owns the game");
+                document.getElementById('company').style.borderColor = "red";
+                return false;
+        } else if (document.getElementById('genre').value == "") {
+                alert("Please enter the genre of the game");
+                document.getElementById('genre').style.borderColor = "red";
+                return false;
+        } else if (document.getElementById('year').value == "") {
+                alert("Please enter the year the game was published");
+                document.getElementById('year').style.borderColor = "red";
+                return false;
+        }
+    }
+</script>
+
+    
+<form method="post" onsubmit="return checkEmpty()">
+    <title> Register </title>
+    All fields marked with * are required. Make sure to complete all information as fully as possible.
+    <br><br>
+    <fieldset>
+    <legend> New Game Information: </legend>
+        
+        Game Title:
+        <br><input type="text" id="title" name="title" size="40">
+        <span class="error">* </span>
+        <br>
+        
+        Ownded by Company:
+        <br><input type="text" id="company" name="company" size="40">
+        <span class="error">* </span>
+        <br>
+        
+        Genre:
+        <br><input type="text" id="genre" name="genre" size="40">
+        <span class="error">* </span>
+        <br><br>
+        
+        Year of Release:
+        <input type="text" id="year" name="year" size="4">
+        <span class="error">* </span>
+        <br>
+        
+    </fieldset>
+    <input type="submit" value="Register">
+    <input type="reset">
+    <br><br><br>
+    
+</form>
+</body>
+</html>

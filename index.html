@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<style>
+    .error {color: #FF0008;}
+</style>
+<body>
+    
+    <script>
+    function checkEmpty() {
+        if (document.getElementById('user').value == "") {
+                alert("Please enter your username");
+                document.getElementById('user').style.borderColor = "red";
+                return false;
+        } else if (document.getElementById('pass').value == "") {
+                alert("Please enter your password");
+                document.getElementById('pass').style.borderColor = "red";
+                return false;
+        }
+    }
+    </script>
+
+    <form method="post">
+        <title> Login </title>
+        <br>
+        <fieldset>
+        <legend> Login Details: </legend>
+            Username:
+            <br><input type="text" id="user" name="user">
+            <span class="error">* </span>
+            <br>
+
+            Password:
+            <br><input type="password" id="pass" name="pass">
+            <span class="error">* </span>
+            <br>
+        </fieldset>
+        <br><input type="submit" value="Login">
+    </form>
